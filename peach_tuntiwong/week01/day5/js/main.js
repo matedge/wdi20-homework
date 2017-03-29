@@ -100,7 +100,6 @@ var planTrip = function(fromLine, fromStop, toLine, toStop) {
   if (fromLine === toLine) {
     // Case: on the same line
     planTripSingle(fromLine, fromStop, toLine, toStop);
-
   } else {
     // Case: on different line
     planTripCross(fromLine, fromStop, toLine, toStop);

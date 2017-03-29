@@ -1,0 +1,108 @@
+body {
+  background: #d6d6d6;
+}
+
+header {
+  display: block;
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+nav {
+  background: #0d0417;
+}
+
+li {
+  color: white;
+  display: inline-block;
+  padding: 10px 15px;
+  font-family: Arial;
+  background: #0d0417;
+}
+
+li:hover {
+  background: orange;
+}
+
+.navButton {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  display: inline-block;
+  padding-left: 90px;
+  background: #0d0417;
+}
+
+h2 {
+  font-size: 2em;
+  font-family: 'VT323', monospace;
+}
+
+p {
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+section {
+  width: 900px;
+  height: 600px;
+  margin: 50px auto;
+  position: relative;
+  background: white;
+  box-shadow: 10px 10px 10px grey;
+}
+
+div.column1 {
+  background: white;
+  width: 500px;
+  height: 600px;
+  float: left;
+  padding: 15px 0 15px 30px;
+  box-shadow: 10px 10px 10px grey;
+}
+
+div.column1 img {
+  width: 450px;
+  height: 509px;
+}
+
+div.column2 {
+  background: white;
+  width: 340px;
+  height: 540px;
+  float: right;
+  padding: 90px 30px 0 0px;
+  text-align: justify;
+  box-shadow: 10px 10px 10px grey;
+}
+
+.direct {
+  text-decoration: none;
+  color: red;
+}
+
+.biography {
+  width: 850px;
+  text-align: justify;
+  background: white;
+  height: 550px;
+  padding: 25px;
+}
+
+
+.mov_intro {
+  background: white;
+  padding: 20px;
+  box-shadow: 10px 10px 10px grey;
+  text-align: justify;
+}

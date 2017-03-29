@@ -1,0 +1,17 @@
+body {
+  background-color: #000;
+}
+
+
+#words{
+  display:none;
+
+}
+
+.word{
+  font-family: georgia, serif;
+  font-size: 60pt;
+  color: #ffffff;
+  display: none;
+  positon: absolute;
+}

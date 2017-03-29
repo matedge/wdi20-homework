@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron|Yrsa');
+
+nav {
+  background-color: grey;
+  height: 40px;
+  padding-top: 20px;
+}
+h1 {
+  font-size: 75px;
+  font-family: Orbitron, sans-serif;
+  text-align: center;
+  text-shadow: 4px 4px 8px;
+}
+p {
+  font-size: 20px;
+  font-family: Yrsa, sans-serif;
+  padding: 10px 20px 30px 40px;
+}
+footer{
+  text-align: center;
+  color: red;
+}
+a {
+  margin-left: 22%;
+  color: white;
+  margin-top: 50px;
+  font-size: 20px;
+  text-decoration: none;
+
+}
+body {
+  background-color: #e2d6c0;
+}
+div {
+  background-color: white;
+  margin: 20px 100px;
+}
+img {
+  margin: 20px 140px;
+}
+#img {
+  margin: 10px;
+}
+#bioimg {
+  float: left;
+}
+.container2 img {
+  float: left;
+  margin: 10px 10px;
+}
+.container2 {
+  margin: 40px;
+}
+h3 {
+  font-size: 40px;
+  text-align: center;
+}
+iframe {
+  margin-left: 20%;
+}
+.ui_segment{
+  height: 100px;
+  display: inline-block;
+}

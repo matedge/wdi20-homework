@@ -11,11 +11,14 @@ Link Hover Color = #20222a
 
 */
 
-* {
+body {
     font-size: 12px;
     line-height: 17px;
     font-family: "Times New Roman", serif;
     color: #656565;
+    margin: 0px 50px;
+    width: 960px;  
+
 
 }
 

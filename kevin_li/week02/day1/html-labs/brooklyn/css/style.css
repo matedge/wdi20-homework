@@ -1,0 +1,54 @@
+/*
+
+## Style Hints:
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/
+body {
+  font-size: 12px;
+  line-height: 17px;
+  font-family: 'Times New Roman', serif;
+  color: #656565;
+}
+
+div {
+  display: block;
+  margin: 0 auto;
+  width: 960px;
+}
+
+a {
+  text-decoration: none;
+  display: inline;
+}
+
+a:hover {
+  color: #20222a;
+}
+
+h1 {
+  font-size: 40px;
+  color: darkgray;
+}
+
+h2 {
+
+}
+
+a, h4 {
+  color: cornflowerblue;
+}
+
+p {
+  text-align: justify;
+}
+
+section img {
+  border: 5px solid gainsboro;
+}

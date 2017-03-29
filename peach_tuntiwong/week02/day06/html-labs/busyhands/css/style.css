@@ -1,0 +1,149 @@
+
+/*
+
+## Style Hints:
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/
+
+/*#wrapper
+#container
+
+<header>
+<nav>
+
+#main-content
+#social-media
+
+.photobanner
+.imageshadow
+
+#blurb
+
+#home-boxes
+    .home-box
+    .home-box
+    .home-box
+
+<footer>
+    .box-footer
+         .blogroll
+    .box-footer
+         .textwidget
+
+#copyright
+#companybottom */
+.container, nav{
+  margin-left: 100px;
+}
+
+#logo {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+#copyright p {
+  display: inline-block;
+}
+
+#shadow {
+  display:block;
+  position: relative;
+  bottom:5px;
+}
+
+header {
+  background-color: black;
+}
+
+nav div {
+  width: 100px;
+  height: 70px;
+  border-color: white;
+  border-width: 3px;
+  display: inline-block;
+
+  color: white;
+  text-align: center;
+}
+
+nav div:hover {
+  color: lightblue;
+}
+
+#blurb {
+  background-color: gray;
+  width: 940px;
+  height: 47px;
+  padding: 10px;
+  margin: 0px 0px 20px 100px;
+}
+
+#blurb p img {
+  float: right;
+}
+
+#blurb p {
+  display: inline;
+}
+
+footer {
+  background-color: black;
+}
+
+footer .container {
+  width: 960px;
+}
+
+.box-footer {
+  display: inline-block;
+  height: 100px;
+  width: 200px;
+  border-color: gray;
+  border-width: 10px;
+}
+
+h3{
+  color: white;
+}
+
+.box-footer, #copyright, #companybottom {
+  color: #aaaaaa;
+}
+
+#companybottom {
+  display: inline-block;
+  color: blue;
+}
+
+#copyright p:nth-Child(2) {
+  float: right;
+}
+
+#home-boxes {
+  margin-left: 100px;
+  width: 960px;
+}
+
+.home-box {
+  display: inline-block;
+  width: 33%;
+}
+
+.home-box img {
+  padding: 2px;
+  border: 5px solid lightgray;
+  margin-bottom: 20px;
+}
+
+.home-box a {
+  display: inline-block;
+  margin: 15px 0;
+}

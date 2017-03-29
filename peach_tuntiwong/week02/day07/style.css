@@ -1,0 +1,66 @@
+
+p {
+  font-family: Oswald;
+}
+
+h2, h3 {
+  font-family: Lobster!important;
+}
+
+div.masthead.center.aligned.segment {
+  height: 400px;
+}
+div.six.wide.column {
+  border: 5px solid black;
+}
+
+div.footer {
+  height: 70px;
+}
+
+div.footer a.item {
+  color:white;
+}
+
+#hometown-div {
+  background-image: url('https://wallpaperscraft.com/image/new_york_manhattan_panorama_river_bridge_58415_3840x1200.jpg');
+  background-size: contain;
+}
+
+#hometown-div p {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#hometown-div p:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+div#index {
+  background-color: purple!important;
+}
+div#bio {
+  background-color: orange!important;
+}
+div#hometown {
+  background-color: #30c9e8!important;
+}
+div#trivia {
+  background-color: brown!important;
+}
+
+div.ui.large.secondary.inverted.pointing.menu a.item{
+  font-weight: bold;
+  color: white!important;
+}
+
+div.ui.large.secondary.inverted.pointing.menu  {
+  border: 0px;
+}
+/*
+div.masthead.center.aligned.segment a.item,a.active.item,h1.ui.inverted.header,h2 {
+  color: black!important;
+}*/
+div.masthead.center.aligned.segment div.ui.text.container{
+  position: relative;
+  top: 100px;
+}

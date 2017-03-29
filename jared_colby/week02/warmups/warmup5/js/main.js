@@ -1,34 +1,38 @@
-var revengeOfbadger = {
-  studentClaps:{
+$(document).ready(function(){
 
-    'Jared': 1,
-    'Fred': 2,
-    'Alice':3,
-},
+  var words = $('#words').text().split(/[ .;,\n\-]/);
 
-shortList: [],
+  var $body = $('body');
 
-  getCandidates: function () {
+  var randy = function ( max ) {
+    return Math.floor ( Math.random() * max);
 
-    for(studentName in this.studentClaps){
-      if (this.studentClaps[stuentName] > 2 ){
-        this.shortList.push( studentName);
-      }
-    }
-    return this.shortList.length;
-  },
-
-  drawWinner: function () {
-
-    var winner;
-    var numberOfCandidates = this.getCandidates();
-
-    if (numberOfCandidates === 0){
-      winner = "Badger";
-    }else{
-      var winnerIndex = Math.floor(Math.random()* numberOfCandidates);
-      winner = this.shortlist[winnerIndex];
-    }
-    console.log("Lucky " + winner );
   }
-};
+
+  var putWord = function () {
+
+    var randomIndex = randy(words.length);
+    var text = words [randomIndex];
+
+    var $div = $('<div class = "word"></div>').text( text );
+
+    $div.css({
+      top: randy( window.innerHeight ) + 'px',
+      left: randy( window.innerWidth ) + 'px',
+      display: 'inline',
+      color: 'rgb('+ randy(255)')'
+    });
+
+    $body.append($div);
+
+
+
+
+    $div.fadeIn(1000).fadeOut(2000, function(){
+      $(this).remove();
+    });
+
+  };
+  setInterval(putWord,500);
+
+});
