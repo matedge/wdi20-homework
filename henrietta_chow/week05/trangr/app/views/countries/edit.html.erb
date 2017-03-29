@@ -1,0 +1,7 @@
+<%= form_for @country do |c| %>
+  <p>
+    <%= c.label "Name" %>
+    <%= c.text_field :name %>
+  </p>
+  <%= c.submit "Submit", class: "ui primary button"%>
+<% end %>

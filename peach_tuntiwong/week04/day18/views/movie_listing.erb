@@ -1,0 +1,6 @@
+
+<ul>
+  <% @search_list.each do |movie_database| %>
+  <li><a href="/poster_view?id=<%=movie_database["imdbID"]%>"><%= "#{movie_database["Title"]}" %></a></li>
+  <% end %>
+</ul>

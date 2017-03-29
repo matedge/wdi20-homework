@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>List of search matches</h2>
+  <ol>
+    <% @top_5.each do |el| %>
+    <% id = el["imdbID"] %>
+      <li><a href="/movie_details?id=<%= id %>"><%= "#{el["Title"]} (#{el["Year"]})" %></a></li>
+    <% end %>
+  </ol>
+</div>

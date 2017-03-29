@@ -1,0 +1,19 @@
+<% if @activity.errors %>
+  <ul>
+    <% @activity.errors.full_messages.each do |msg| %>
+      <li><<%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<h1>Add an Awesome Activity!</h1>
+<%= form_for @activity do |a| %>
+  <input type="hidden" name="city_id" value="<%= params[:city_id] %>"/>
+  <p>
+    <%= a.label "Name" %>
+    <%= a.text_field :name %>
+  </p>
+  <p>
+    <%= a.submit class: "ui primary button"%>
+<% end %>

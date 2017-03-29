@@ -1,0 +1,10 @@
+<h1>List of <%= "#{@page_name}" %></h1>
+<ul>
+  <% @data_array.each do |item| %>
+    <li>
+      <a href="/<%= @page_name %>/<%= item['id'] %>"> <!-- /mountains/2 -->
+        <%= "#{item['name']}, #{item['location']}" %>
+      </a>
+    </li>
+  <% end %>
+</ul>

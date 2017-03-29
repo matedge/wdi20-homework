@@ -1,0 +1,13 @@
+<h1>List of our favourite fabulously famous tennis players</h1>
+
+<!-- <h4>My real favourite is:</h4> -->
+<!-- <p><%= @favourite_tennis_players %></p> -->
+
+
+<% @results.each do |tennis_players| %>
+<p><a href ="/tennis_player/<%= tennis_players['id'] %>"><%= "#{tennis_players['id']}: #{tennis_players['first_name']} #{tennis_players['last_name']}" %></a></p>
+<% end %>
+
+<p>
+  <a href="/tennis_player/new"><button>Play God</button></a>
+</p>

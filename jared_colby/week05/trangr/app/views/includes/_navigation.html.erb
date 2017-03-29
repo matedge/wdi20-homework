@@ -1,0 +1,11 @@
+<div class="ui fixed inverted menu">
+  <div class="ui container">
+    <%= link_to root_path, class: "header item" do %>
+      <%= image_tag "logo.png", class: "logo" %>
+      Trangr
+    <%end%>
+    <%= link_to "Signup", signup_path, id:"Signup", class: "item" %>
+    <%= link_to "Signin", signin_path, id:"Signin", class: "item" %>
+    <%= link_to "Signout", signout_path, id:"Signout", class: "item", method: "delete" %>
+  </div>
+</div>

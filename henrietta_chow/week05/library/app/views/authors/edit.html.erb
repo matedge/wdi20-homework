@@ -1,0 +1,16 @@
+<h1>Edit Author</h1>
+<%= form_for @author do |a| %>
+  <p>
+    <%= a.label "First Name" %>
+    <%= a.text_field :first_name %>
+  </p>
+  <p>
+    <%= a.label "Last Name" %>
+    <%= a.text_field :last_name %>
+  </p>
+  <p>
+    <%= a.label "Image Source" %>
+    <%= a.text_field :image_src %>
+  </p>
+  <%= a.submit "Update Author" %>
+<% end %>

@@ -17,7 +17,7 @@ num2 = gets.chomp.to_i
 case choice
 when "1" || "+"
   puts "************** Your Result **************"
-  puts num1 + num2  
+  puts num1 + num2
   puts "*****************************************"
 
 when "2" || "-"

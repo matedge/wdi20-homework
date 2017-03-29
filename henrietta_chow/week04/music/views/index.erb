@@ -1,0 +1,8 @@
+<h1>Music Everywhere!</h1>
+
+<% @results.each do |musician| %>
+  <p><a href="/music/<%= musician['id'] %>"><%= "#{musician['id']}: #{musician['name']}" %></a></p>
+<% end %>
+
+<p><a href="/music/new"><button>Create Profile</button></a></p>
+<p><a href="/music/search"><button>Search Musicians</button></a></p>

@@ -1,0 +1,7 @@
+<h2>List of search matches</h2>
+
+<ol>
+  <% @search_results.each do |musician| %>
+  <li><a href="/music/<%= musician["id"] %>"><%= "#{musician["name"]} (#{musician["genre"]})" %></a></li>
+  <% end %>
+</ol>

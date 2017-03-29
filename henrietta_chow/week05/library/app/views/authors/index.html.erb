@@ -1,0 +1,9 @@
+<h1>Virtual Library</h1>
+
+<%= link_to "New Author", new_author_path %> | <%= link_to "See All Books", books_path %>
+
+<ul>
+  <% @authors.each do |a| %>
+  <li><%= link_to "#{a.first_name} #{a.last_name}", author_path(a.id) %></li>
+  <%end%>
+</ul>

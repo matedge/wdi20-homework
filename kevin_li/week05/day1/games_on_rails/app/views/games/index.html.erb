@@ -1,0 +1,19 @@
+<h1>All da gamez</h1>
+
+<%= form_tag "games/magic_8_ball", method: "POST" do %>
+  <label>Magic 8 ball</label>
+  <input type="text" name="question"/>
+  <input type="submit" value="ask a question"/>
+<%end%>
+
+<%= form_tag "games/secret_number", method: "POST" do %>
+  <label>Secret Number</label>
+  <input type="text" name="guess_number"/>
+  <input type="submit" value="guess a number"/>
+<%end%>
+
+<%= form_tag "games/rock_paper_scissors", method: "POST" do %>
+  <label>Rock Paper Scissors</label>
+  <input type="text" name="throw_pattern"/>
+  <input type="submit" value="throw a pattern"/>
+<%end%>

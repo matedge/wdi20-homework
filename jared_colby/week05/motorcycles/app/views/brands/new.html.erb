@@ -1,0 +1,11 @@
+<%= form_for @brand do |f|%>
+  <p>
+    <%= f.label :manufacturer %>
+    <%= f.text_field :manufacturer %>
+  </p>
+  <p>
+    <%= f.label :image_src %>
+    <%= f.text_field :image_src %>
+  </p>
+  <%= f.submit %>
+<%end%>

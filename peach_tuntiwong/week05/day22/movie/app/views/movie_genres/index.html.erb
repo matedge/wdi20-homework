@@ -1,0 +1,7 @@
+<h1>Movie Genres</h1>
+<%= link_to "New Movie Genre", new_movie_genre_path %>
+<ul>
+  <% @movie_genres.each do |genre| %>
+    <li><%= link_to genre.name, movie_genre_path(genre.id) %></li>
+  <%end%>
+</ul>

@@ -1,0 +1,20 @@
+<div class="container">
+
+<h1>Club Members</h1>
+<!-- loops through records and displays records based on attributes -->
+<% @results.each do |motorcycles| %>
+
+  <div class="members">
+    <a href="/motorcycles/<%= motorcycles['id'] %>"><%= "#{motorcycles['owner']} #{motorcycles['make']}  #{motorcycles['model']}" %></a>
+  </div>
+  <div class="likes">
+    <%= "Likes: #{motorcycles['likes']} " %>
+  </div>
+
+<% end %>
+
+<p>
+  <a href="/motorcycles/new"><button>add new ride!</button></a>
+</p>
+
+</div>

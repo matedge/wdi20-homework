@@ -1,0 +1,14 @@
+<div class="container">
+
+<h1><%= @motorcycle['owner'] %></h1>
+
+<img src="<%= @motorcycle['image_src'] %>"/>
+<p>
+  <a href="/motorcycles/<%= @motorcycle['id'] %>/prev"><button>PREV</button></a>
+  <a href="/motorcycles/<%= @motorcycle['id'] %>/edit"><button>EDIT</button></a>
+  <a href="/motorcycles/<%= @motorcycle['id'] %>/delete"><button>DELETE</button></a>
+  <a href="/motorcycles/club_members"><button>EXIT</button></a>
+  <a href="/motorcycles/<%= @motorcycle['id'] %>/like"><button>LIKE</button></a>
+  <a href="/motorcycles/<%= @motorcycle['id'] %>/next"><button>NEXT</button></a>
+</p>
+</div>

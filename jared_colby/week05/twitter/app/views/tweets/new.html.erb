@@ -1,0 +1,6 @@
+<!-- <form method="post" action="/tweets" > -->
+<%= form_for @tweet do |f| %>
+  <%= f.label :message %>
+  <%= f.text_field :message %>
+  <%= f.submit "Create Tweet" %>
+<%end%>

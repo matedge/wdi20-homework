@@ -1,0 +1,20 @@
+<% if @motorcycle.errors %>
+  <ul>
+    <% @motorcycle.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <%end%>
+  </ul>
+<%end%>
+
+<%= form_for @motorcycle do |f|%>
+  <input type="hidden" name="motorcycle[brand_id]" value=<%= @brand_id %> />
+  <p>
+    <%= f.label :model %>
+    <%= f.text_field :model %>
+  </p>
+  <p>
+    <%= f.label :image_src %>
+    <%= f.text_field :image_src %>
+  </p>
+  <%= f.submit %>
+<%end%>

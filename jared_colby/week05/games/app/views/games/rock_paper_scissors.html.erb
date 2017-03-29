@@ -1,0 +1,8 @@
+<h1>this is rock_paper_scissors</h1>
+
+
+<%= form_for"games/rock_paper_scissors", method: :get do |f| %>
+  <%= f.label :question %>
+  <%= f.text_field :message %>
+  <%= f.submit "play" %>
+<%end%>

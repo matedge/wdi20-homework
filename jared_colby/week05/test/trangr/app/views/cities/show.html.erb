@@ -1,0 +1,16 @@
+<h1>This is <%= @city.name %>!</h1>
+
+<h3>Activities</h3>
+<ul>
+  <% @city.activities.each do |activity| %>
+    <li><%= link_to activity.name, activity_path(activity.id) %></li>
+  <%end%>
+</ul>
+
+<h3>Landmarks</h3>
+<ul>
+  <% @city.landmarks.each do |landmark| %>
+    <li><%= landmark.name %></li>
+  
+  <%end%>
+</ul>

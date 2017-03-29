@@ -75,7 +75,7 @@ $("#checking-withdraw").on ("click", checkingWithdraw);
       drawScreen();
     }
 
-    $("#savings-deposit").on ("click", savingsDeposit);
+    $("#savings-deposit").on ("click", $("1").html("I've been clicked!"));
     $("#savings-withdraw").on ("click", savingsWithdraw);
 
 

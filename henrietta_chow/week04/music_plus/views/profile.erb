@@ -1,0 +1,11 @@
+<h1>This is the profile page of <%= @profile.name %></h1>
+
+<img src='<%= @profile.img_src %>'>
+<p>Genre: <%= @profile.genre %></p>
+<p>Top Hit: <%= @profile.top_hit %></p>
+<p>Find out more about <%= @profile.name %> at their website: <a href="<%= @profile.music_url %>"><%= @profile.music_url %></a></p>
+
+<p>
+  <a href="/music/<%= @profile.id %>/edit"><button>Edit Profile</button></a>
+  <a href="/music/<%= @profile.id %>/delete"><button>Delete Profile</button></a>
+</p>

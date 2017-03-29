@@ -1,0 +1,10 @@
+<h1>This is the fabulous profile page of <%= @tennis_players['first_name'] + " " + @tennis_players['last_name'] %></h1>
+<img src="<%= @tennis_players['image_src'] %>"/>
+
+<p>Age: <%= @tennis_players['age'] %></p>
+<p>Ranking: <%= @tennis_players['ranking'] %></p>
+
+<p>
+  <a href="/tennis_player/<%= @tennis_players['id'] %>/edit"><button>EDIT</button></a>
+  <a href="/tennis_player/<%= @tennis_players['id'] %>/delete"><button>DELETE</button></a>
+</p>

@@ -1,0 +1,7 @@
+<h1><%= @activity.name %></h1>
+<h3>Available in:</h3>
+<ul>
+  <% @activity.cities.each do |city| %>
+    <li><%= link_to city.name, city_path(city.id) %></li>
+  <% end %>
+</ul>

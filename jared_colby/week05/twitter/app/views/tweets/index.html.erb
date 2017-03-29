@@ -1,0 +1,9 @@
+<h1>all tweets</h1>
+
+<%= link_to "New Tweet", new_tweet_path %>
+<ul>
+  <% @tweets.each do |t| %>
+  <li><%=t.message%> | <%= link_to "edit", edit_tweet_path(t) %> | <%= link_to "Delete", tweet_path(t), method: :destroy %></li>
+  <%end%>
+
+</ul>

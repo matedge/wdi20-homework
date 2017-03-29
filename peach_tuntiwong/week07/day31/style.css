@@ -1,0 +1,16 @@
+#search {
+  float: right;
+}
+
+#search_bar {
+  margin: 30px;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.movie_item {
+  padding: 30px;
+}

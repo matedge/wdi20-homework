@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Sinatra have convention where if there is request for assets (js/css), it will look into "public" folder to look for asset. This won't work if the folder name is not "public", you will have to directly write down the path to access the file -->
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Place header & nav bar above page content here -->
+  <hr>
+  <!-- yield is where the content in each page that use this layout will be dropped into -->
+  <%= yield %>
+  <hr>
+  <!-- Place footer below page content here -->
+  <footer>
+    <!-- Footer content here -->
+  </footer>
+</body>
+</html>

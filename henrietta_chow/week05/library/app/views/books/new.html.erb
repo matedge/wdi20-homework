@@ -1,0 +1,17 @@
+<h1>Add a New Book</h1>
+<%= form_for @book do |b| %>
+<input type="hidden" name="book[author_id]" value="<%= @author_id %>"/>
+  <p>
+    <%= b.label "Name" %>
+    <%= b.text_field :name %>
+  </p>
+  <p>
+    <%= b.label "Genre" %>
+    <%= b.text_field :genre %>
+  </p>
+  <p>
+    <%= b.label "Image Source" %>
+    <%= b.text_field :image_src %>
+  </p>
+  <%= b.submit %>
+<% end %>

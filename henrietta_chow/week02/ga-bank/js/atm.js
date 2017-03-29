@@ -3,27 +3,6 @@ $(document).ready(function(){
   var bank = {
     totalBalance: checking.balance + savings.balance,
 
-    balanceCheck: function (amount) {
-      var goodToWithdraw = true;
-
-      if (amount > checking.balance ) {
-        if ((amount - checking.balance) > savings.balance) {
-
-          this.goodToWithdraw = false;
-
-        } else  {
-          this.goodToWithdraw = true;
-        }
-      }
-
-      return this.goodToWithdraw;
-    },
-
-    totalBalanceUpdate: function () {
-      checking.balance + savings.balance;
-      return this.totalBalance;
-    },
-
     checking: {
       balance: 0.00,
 
@@ -34,26 +13,24 @@ $(document).ready(function(){
       },
 
       withdraw: function (amount) {
-        // var goodToWithdraw = bank.balanceCheck(amount);
+
+        // debugger;
+        bank.totalBalance = this.balance + bank.savings.balance;
 
         if (amount <= this.balance) {
 
           this.balance -= amount;
 
-        } else if (amount < bank.totalBalance) {
+        } else if (amount <= bank.totalBalance) {
 
-          if ((amount - this.balance) <= bank.savings.balance){
+          var remainder = amount - this.balance;
+          this.balance = 0.00;
+          bank.savings.balance -= remainder;
 
-            var remainder = amount - this.balance;
-            this.balance === 0.00;
-            bank.savings.balance -= remainder;
-
-          }
         } else {
 
           alert("Insufficient funds");
         }
-          // this.balance -= amount;
           return this.balance;
       }
     },
@@ -82,8 +59,6 @@ $(document).ready(function(){
     }
 
   };
-
-  // (parseInt($("#checking-balance").text().replace("$", "")))
 
   var bankInterface = {
 
@@ -134,7 +109,7 @@ $(document).ready(function(){
     // inputCheck: function (element) {
     //   var input = parseFloat($(element).val());
     //   console.log(input);
-    //   return this.input;
+    //   return input;
     },
 
     savingsDisplayReset: function (){
@@ -160,6 +135,7 @@ $(document).ready(function(){
     var newBalance = bank.checking.withdraw(input);
 
     bankInterface.checkingDisplayUpdate();
+    bankInterface.savingsDisplayUpdate();
   });
 
   //savings buttons
@@ -180,11 +156,3 @@ $(document).ready(function(){
   });
 
 });
-
-
-
-// 1. When deposit button is clicked
-// 2. Record amount entered in window as amountEntered
-// 3. ParseInt of existing amount
-// 3. Take amountEntered + existing amount in checking account
-// 4. Update balance with new amount

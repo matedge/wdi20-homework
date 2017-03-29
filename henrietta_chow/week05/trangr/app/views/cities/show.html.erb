@@ -1,0 +1,21 @@
+<h1>This is <%= @city.name %>!</h1>
+<% if @current_user %>
+  <%= link_to "Delete City", city_path(city_id: @city.id), method: :delete %> |
+  <%= link_to "Add an Activity", new_activity_path(city_id: @city.id) %> |
+  <%= link_to "Add a Landmark", new_landmark_path(city_id: @city.id) %> |
+  <%= link_to "Delete a Landmark", landmark_select_path(city_id: @city.id) %>
+<% end %>
+
+<h3>Activities</h3>
+<ul>
+  <% @city.activities.each do |a| %>
+    <li><%= link_to a.name, activity_path(a.id) %></li>
+  <% end %>
+</ul>
+
+<h3>Landmarks</h3>
+<ul>
+  <% @city.landmarks.each do |l| %>
+    <li><%= l.name %></li>
+  <% end %>
+</ul>

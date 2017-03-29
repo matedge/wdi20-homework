@@ -1,0 +1,7 @@
+<h3>Your guess: <%= params[:guess] %> </h3>
+
+<h3>The number is: <%= @secret_number %></h3>
+
+<h3><%= @secret_number_result %></h3>
+
+<%= link_to "Play Again", secret_game_path %>
