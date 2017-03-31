@@ -1,0 +1,10 @@
+<h1>Welcome to <%= @country.name %>!</h1>
+<%# if @current_user %>
+  <%= link_to "Edit", edit_country_path(@country.id) %>
+<%#end%>
+
+<ul>
+  <% @country.cities.each do |city| %>
+    <li><%= link_to city.name, city_path(city.id) %></li>
+  <%end%>
+</ul>
