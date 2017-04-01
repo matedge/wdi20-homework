@@ -47,3 +47,8 @@ h4 {
   margin: auto;
 
 }
+
+footer {
+  background: gray;
+  height: 200px;
+}

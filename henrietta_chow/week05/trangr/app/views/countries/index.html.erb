@@ -1,0 +1,15 @@
+<% if @current_user %>
+  <h4>Great to see you again <%= @current_user.email %></h4>
+<% end %>
+<h2>Where Should We Go?</h2>
+<%= form_tag "/countries", method: "get", class: "ui form" do %>
+  <select name="country_id" class="ui search dropdown">
+    <% @countries.each do |c| %>
+      <option value="<%= c.id %>"><%= c.name %></option>
+    <% end %>
+  </select>
+  <%= submit_tag "Go", class: "ui primary button" %>
+<% end %>
+<% if @current_user %>
+  <%= button_to "Add Country", new_country_path, method: :get, class: "ui primary button" %>
+<% end %>

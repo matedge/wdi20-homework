@@ -1,0 +1,10 @@
+<% if @current_user %>
+  <%= form_tag "/landmarks/id", method: "delete", class: "ui form" do %>
+    <select name="landmark_id" class="ui search dropdown">
+      <% @landmarks.each do |l| %>
+        <option value="<%= l.id %>"><%= l.name %></option>
+      <% end %>
+    </select>
+    <%= submit_tag "Go", class: "ui primary button" %>
+  <% end %>
+<% end %>

@@ -1,0 +1,10 @@
+<h2>Been somewhere exciting? </h2>
+
+<%= form_for @city do |f|%>
+<input type="hidden" name="city[country_id]" value= "<%= @country_id %>" />
+  <p>
+    <%= f.label :add_city %>
+    <%= f.text_field :name, class: "ui form" %>
+  </p>
+    <%= f.submit "Go", class: "ui button primary" %>
+<%end%>

@@ -1,0 +1,24 @@
+<div class="container">
+
+<form method="POST" action="/motorcycles/<%= @motorcycle['id'] %>">
+  <p>
+    <label>Make</label>
+    <input type="text" name="make" value="<%= @motorcycle['make'] %>"/>
+  </p>
+  <p>
+    <label>Model</label>
+    <input type="text" name="model" value="<%= @motorcycle['model'] %>"/>
+  </p>
+  <p>
+    <label>Add Image</label>
+    <input type="text" name="image_src" value="<%= @motorcycle['image_src'] %>"/>
+  </p>
+  <p>
+    <label>Owner</label>
+    <input type="text" name="owner" value="<%= @motorcycle['owner'] %>"/>
+  </p>
+
+  <input type="submit" value="Edit Record"/>
+</form>
+
+</div>

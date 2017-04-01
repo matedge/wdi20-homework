@@ -1,0 +1,25 @@
+<h1>Edit Your Music Profile</h1>
+
+<form action="/music/<%= @profile.id %>" method="POST">
+  <p>
+    <label>Name</label>
+    <input class="field" type="text" name="name" value="<%= @profile.name %>"/>
+  </p>
+  <p>
+    <label>Genre</label>
+    <input class="field" type="text" name="genre" value="<%= @profile.genre %>"/>
+  </p>
+  <p>
+    <label>Image Source</label>
+    <input class="field" type="text" name="img_src" value="<%= @profile.img_src %>"/>
+  </p>
+  <p>
+    <label>Site URL</label>
+    <input class="field" type="text" name="music_url" value="<%= @profile.music_url %>"/>
+  </p>
+  <p>
+    <label>Top Hits</label>
+    <input class="field" type="text" name="top_hit" value="<%= @profile.top_hit %>"/>
+  </p>
+  <input class="button" type="submit" value="Edit Profile"/>
+</form>

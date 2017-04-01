@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+body {
+  background-color: rgba(211, 222, 221, 0.27);
+  font-family: 'Indie Flower', cursive;
+}
+
+.largeDiv {
+  height: 300px;
+  width: auto;
+
+  background-image: url(https://cdn.pixabay.com/photo/2012/10/29/15/36/ball-63527_1280.jpg);
+  opacity: .5;
+}
+
+.london {
+  height: 300px;
+  width: auto;
+
+  background-image: url(https://cdn.pixabay.com/photo/2014/11/13/23/34/london-530055_1280.jpg);
+  opacity: .5;
+}
+
+.trivia{
+  height: 300px;
+  width: auto;
+
+  background-image: url(https://thumb9.shutterstock.com/display_pic_with_logo/3796601/521114875/stock-vector-billboard-with-trivia-in-cityscape-night-background-shape-for-521114875.jpg);
+  opacity: .5;
+}
+
+
+header{
+  height: 50px;
+}
+nav {
+  height: 50px;
+  background-color: #f9f8f8;
+}
+
+a{
+  background-color: #f9f8f8;
+  color: #5e0404;
+  padding: 16px;
+  display: block;
+  float: right;
+}
+a:hover{
+	background-color: #ee5f3c;
+}
+#adaPic {
+  opacity: 1;
+  left: 44%;
+  top: -220px;
+  position: relative;
+  max-width: 13%;
+}
+
+.profile{
+  position: relative;
+
+  max-height: 70px;
+}
+
+.one{
+  background-color: #dcdedd;
+  position: relative;
+  display: inline-block;
+  width: 60%;
+  height: auto;
+  margin-left: 15%;
+  padding: 20px;
+  opacity: .2;
+}
+
+.one:hover{
+  opacity: 1;
+}
+
+.two{
+  background-color: #c41cc5;
+  position: relative;
+  display: inline-block;
+  width: 60%;
+  height: auto;
+  margin-left: 15%;
+  padding: 20px;
+  opacity: .2;
+}
+
+.two:hover{
+  opacity: 1;
+}
+
+.three{
+  background-color: #54c51c;
+  position: relative;
+  display: inline-block;
+  width: 60%;
+  height: auto;
+  margin: 15%;
+  padding: 20px;
+  opacity: .2;
+}
+
+.three:hover{
+  opacity: 1;
+}
+
+h1{
+  text-align: center;
+
+  margin: 0;
+}
+
+.video{
+  margin: 5% 0 0 17%;
+}

@@ -1,0 +1,41 @@
+.board {
+  width: 350px;
+  height: 350px;
+  border: 1px solid #ffffff;
+}
+
+.row1 {
+  width: 300px;
+  height:300px;
+  border:1px solid black;
+
+}
+
+#r1_1,#r1_2,#r1_3 {
+    width:100px;
+    height:100px;
+    border:1px solid black;
+    float: left;
+}
+.row2{
+  width: 300px;
+  height:300px;
+  border:1px solid black;
+}
+#r2_4,#r2_5,#r2_6 {
+    width:100px;
+    height:100px;
+    border:1px solid black;
+    float: left;
+}
+.row3{
+  width: 300px;
+  height:300px;
+  border:1px solid black;
+}
+#r3_7,#r3_8,#r3_9 {
+    width:100px;
+    height:100px;
+    border:1px solid black;
+    float: left;
+}

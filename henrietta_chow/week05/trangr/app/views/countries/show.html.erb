@@ -1,0 +1,13 @@
+<h1>Welcome to <%= @country.name %>!</h1>
+<% if @current_user %>
+  <%= link_to "Edit Country", edit_country_path(id: @country.id) %> |
+  <% if @current_user.admin %>
+    <%= link_to "Delete Country", country_path(id: @country.id), method: :delete, data: {confirm: "Hey are you sure you'd like to delete #{@country.name}?"}%> |
+  <% end %>
+  <%= link_to "Add City", new_city_path(country_id: @country.id) %>
+<% end %>
+<ul>
+  <% @country.cities.each do |city| %>
+    <li><%= link_to city.name, city_path(city.id)%></li>
+  <% end %>
+</ul>

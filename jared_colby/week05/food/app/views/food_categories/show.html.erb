@@ -1,0 +1,9 @@
+<h1><%= @food_category.name %></h1>
+
+<%= link_to "New Food Item", new_food_item_path(:food_category_id: @food_category.id) %>
+
+<ul>
+  <% food_category.food_items.each do |fi| %>
+    <li><%= fi.name %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,8 @@
+<%= form_for @landmark do |f|%>
+<input type="hidden" name="landmark[city_id]" value= "<%= @city_id %>" />
+  <p>
+    <%= f.label :add_landmark %>
+    <%= f.text_field :name, class: "ui form" %>
+  </p>
+    <%= f.submit "Go", class: "ui button primary" %>
+<%end%>

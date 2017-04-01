@@ -1,0 +1,45 @@
+header {
+  margin: 0 auto;
+  width: 90%;
+}
+
+nav {
+  position: absolute;
+}
+
+h1 {
+  background: url("file:///Users/kevin/wdi/classwork/week2/day1/html-labs/busyhands/images/bg_wrapper.png");
+  width: 90%;
+  height: 488px;
+  margin: 0 auto;
+  position: absolute;
+}
+
+li {
+  color: white;
+  display: inline-block;
+  padding: 15px;
+  font-family: Arial;
+
+}
+
+ul {
+  display: inline-block;
+  padding-left: 90px;
+  background: black;
+}
+
+.images {
+  display: block;
+  margin: 70px 15%;
+  position: absolute;
+  width: 90%;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.social {
+  margin-left: 425px;
+}

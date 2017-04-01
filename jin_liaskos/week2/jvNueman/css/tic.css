@@ -1,0 +1,161 @@
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background: #ededef;
+}
+
+h1{
+    font-family: 'Nunito', sans-serif;
+    text-shadow: 3px 3px 4px #aaa;
+	padding-right: 10px;
+	padding-left: 0px;
+	padding-top: 0px;
+}
+
+.board {
+  width: 500px;
+  height: 500px;
+  align-self: center;
+  border: 3px solid #f2f2f2;
+}
+
+.row {
+  width: 310px;
+  height:100px;
+}
+
+.cell{
+  width:100px;
+  height:100px;
+  border:1px solid black;
+  text-align: center;
+  vertical-align: middle;
+  float: left;
+}
+
+ul, ol, dl {
+	padding: 0;
+	margin: 0;
+}
+h2, h3, h4, h5, h6, p {
+	margin-top: 0px;
+	padding-right: 10px;
+	padding-left: 0px;
+	padding-top: 0px;
+}
+a img {
+	border: none;
+}
+a:link {
+	color:#00F
+	text-decoration: underline;
+}
+a:visited {
+	color: #00F;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus {
+	text-decoration: none;
+}
+
+#wrapper {
+	background-image:url(../images/bg_wrapper.png);
+	background-repeat:repeat-x;
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.header {
+	height:40px;
+}
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: none;
+	height:77px;
+}
+
+ul.nav li {
+    float: left;
+}
+
+ul.nav li a {
+    display: block;
+    color: #96755e;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+ul.nav li.active a {
+    color:#000;
+	text-decoration:overline;
+}
+
+ul.nav li a:hover {
+	color:#ff0000;
+}
+
+
+.main-content {
+	padding: 20px 0;
+}
+
+.logo {
+	margin-top:10px;
+	float:left;
+	width:inherit;
+}
+
+.strap{
+	background-color:#fff;
+}
+
+.strap1{
+	height: 20px;
+	width: 100%;
+	background-color:#000;
+}
+
+.edge{
+	height: 35px;
+	background-color:#d1c6ab;
+	border-left:solid #000 20px;
+	text-align:right;
+}
+
+
+.strap2{
+	height: 25px;
+	width: 100%;
+	background-color:#d1c6ab;
+	text-align:right;
+}
+
+
+#pic {
+	margin-top:20px;
+	position:absolute;
+	top:70px;
+	margin-left: 40px;
+}
+
+#blurbtext {
+	width:550px;
+	margin-left:350px;
+}
+
+#footer {
+	margin-left: 5px 0;
+	background: #000;
+	font-size:8px;
+	color:#0000;
+}

@@ -1,0 +1,9 @@
+<h1><%= "#{@author.first_name} #{@author.last_name}" %></h1>
+<img src='<%= @author.image_src %>'>
+<p><%= "Books by #{@author.first_name} #{@author.last_name}" %></p>
+<ul>
+  <% @author.books.each do |b| %>
+    <li><%= link_to b.name, book_path(b.id) %></li>
+  <% end %>
+</ul>
+<p><%= link_to "Edit Profile", edit_author_path(author_id: @author.id) %> | <%= link_to "Delete Author", author_path(author_id: @author.id), method: :delete %> | <%= link_to "Add More Books", new_book_path(author_id: @author.id) %> | <%= link_to "Back to Home", root_path %></p>

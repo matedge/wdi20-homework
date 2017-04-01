@@ -1,0 +1,6 @@
+<h1>This is the fabulous profile page of <%= @person['first_name'] + " " + @person['last_name'] %></h1>
+<img src="<%= @person['image_src'] %>"/>
+<p>
+  <a href="/people/<%= @person['id'] %>/edit"><button>EDIT</button></a>
+  <a href="/people/<%= @person['id'] %>/delete"><button>DELETE</button></a>
+</p>

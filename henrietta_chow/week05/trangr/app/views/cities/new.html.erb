@@ -1,0 +1,19 @@
+<% if @city.errors %>
+  <ul>
+    <% @city.errors.full_messages.each do |msg| %>
+      <li><<%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<h1>Been Somewhere Exciting?</h1>
+<%= form_for @city do |c| %>
+  <input type="hidden" name="city[country_id]" value="<%= params[:country_id] %>"/>
+  <p>
+    <%= c.label "Name" %>
+    <%= c.text_field :name %>
+  </p>
+  <p>
+    <%= c.submit class: "ui primary button"%>
+<% end %>

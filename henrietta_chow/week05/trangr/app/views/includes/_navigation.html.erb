@@ -1,0 +1,15 @@
+<div class="ui fixed inverted menu">
+  <div class="ui container">
+    <%= link_to root_path, class: "header item" do %>
+      <%= image_tag "logo.png", class: "logo" %>
+      Trangr
+    <%end%>
+    <%= link_to "Home", root_path, class: "item" %>
+    <%= link_to "Sign In", signin_path, class: "item" %>
+    <%= link_to "Sign Out", signout_path, class: "item", method: :delete %>
+    <% if @current_user %>
+      <%= link_to "New Admin", signup_path, class: "item" %>
+      <%= link_to "Add a Country", new_country_path, method: :get, class: "item" %>
+    <% end %>
+  </div>
+</div>

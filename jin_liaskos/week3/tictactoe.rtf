@@ -1,0 +1,143 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red27\green29\blue31;\red255\green255\blue255;\red13\green0\blue129;
+\red235\green236\blue237;\red36\green38\blue41;\red104\green26\blue29;\red37\green127\blue159;\red43\green39\blue19;
+}
+{\*\expandedcolortbl;;\cssrgb\c14118\c15294\c16078;\cssrgb\c100000\c100000\c100000;\cssrgb\c6275\c6275\c58039;
+\cssrgb\c93725\c94118\c94510;\cssrgb\c18824\c20000\c21176;\cssrgb\c49020\c15294\c15294;\cssrgb\c16863\c56863\c68627;\cssrgb\c22353\c20000\c9412;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww12600\viewh10200\viewkind0
+\deftab720
+\pard\pardeftab720\sl360\sa300\partightenfactor0
+
+\f0\b\fs30 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 JS
+\b0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f1\fs26 \cf4 \cb5 \strokec4 var\cf6 \strokec6  turn = \cf7 \strokec7 'X'\cf6 \strokec6 ;\
+\cf4 \strokec4 var\cf6 \strokec6  score = \{\
+    \cf7 \strokec7 'X'\cf6 \strokec6 : \cf7 \strokec7 0\cf6 \strokec6 ,\
+    \cf7 \strokec7 'O'\cf6 \strokec6 : \cf7 \strokec7 0\cf6 \strokec6 \
+\};\
+\cf4 \strokec4 var\cf6 \strokec6  gridValue = \cf7 \strokec7 0\cf6 \strokec6 ;\
+\
+\cf4 \strokec4 function\cf6 \strokec6  fnLoad() \{\
+    \cf4 \strokec4 var\cf6 \strokec6  select = document.getElementById(\cf7 \strokec7 "grid"\cf6 \strokec6 );\
+    \cf4 \strokec4 for\cf6 \strokec6  (i = \cf7 \strokec7 3\cf6 \strokec6 ; i <= \cf7 \strokec7 100\cf6 \strokec6 ; i += \cf7 \strokec7 1\cf6 \strokec6 ) \{\
+        \cf4 \strokec4 var\cf6 \strokec6  option = document.createElement(\cf7 \strokec7 'option'\cf6 \strokec6 );\
+        select.options[select.options.length] = \cf4 \strokec4 new\cf6 \strokec6  \cf8 \strokec8 Option\cf6 \strokec6 (i + \cf7 \strokec7 ' X '\cf6 \strokec6  + i, i);\
+    \}\
+\
+    addEvent(document.getElementById(\cf7 \strokec7 "game"\cf6 \strokec6 ), \cf7 \strokec7 "click"\cf6 \strokec6 , fnChoose);\
+\
+    fnNewGame();\
+\}\
+\
+\cf4 \strokec4 function\cf6 \strokec6  addEvent(element, eventName, callback) \{\
+\
+    \cf4 \strokec4 if\cf6 \strokec6  (element.addEventListener) \{\
+        element.addEventListener(eventName, callback, \cf4 \strokec4 false\cf6 \strokec6 );\
+    \} \cf4 \strokec4 else\cf6 \strokec6  \cf4 \strokec4 if\cf6 \strokec6  (element.attachEvent) \{\
+        element.attachEvent(\cf7 \strokec7 "on"\cf6 \strokec6  + eventName, callback);\
+    \}\
+\}\
+\
+\cf4 \strokec4 function\cf6 \strokec6  fnChoose(e) \{\
+    \cf4 \strokec4 if\cf6 \strokec6  (e.target && e.target.nodeName == \cf7 \strokec7 "TD"\cf6 \strokec6 ) \{\
+        \cf4 \strokec4 var\cf6 \strokec6  targetElement = document.getElementById(e.target.id);\
+        \cf4 \strokec4 var\cf6 \strokec6  prevTurn;\
+        \cf4 \strokec4 if\cf6 \strokec6  ((targetElement.className).indexOf(\cf7 \strokec7 "disabled"\cf6 \strokec6 ) == -\cf7 \strokec7 1\cf6 \strokec6 ) \{\
+            targetElement.innerHTML = turn;\
+            targetElement.classList.add(\cf7 \strokec7 'disabled'\cf6 \strokec6 );\
+            targetElement.classList.add(turn);\
+            score[turn] += \cf7 \strokec7 1\cf6 \strokec6 ;\
+            prevTurn = turn;\
+            turn = turn === \cf7 \strokec7 "X"\cf6 \strokec6  ? \cf7 \strokec7 "O"\cf6 \strokec6  : \cf7 \strokec7 "X"\cf6 \strokec6 ;\
+            \cf4 \strokec4 if\cf6 \strokec6  (fndecide(targetElement, prevTurn)) \{\
+                alert(prevTurn + \cf7 \strokec7 ' has won the game'\cf6 \strokec6 );\
+                fnNewGame();\
+            \} \cf4 \strokec4 else\cf6 \strokec6  \cf4 \strokec4 if\cf6 \strokec6  ((score[\cf7 \strokec7 'X'\cf6 \strokec6 ] + score[\cf7 \strokec7 'O'\cf6 \strokec6 ]) == (gridValue * gridValue)) \{\
+                alert(\cf7 \strokec7 'Draw!'\cf6 \strokec6 );\
+                fnNewGame();\
+            \}\
+        \}\
+    \}\
+\}\
+\
+\cf4 \strokec4 function\cf6 \strokec6  fndecide(targetElement, prevTurn) \{\
+    \cf4 \strokec4 var\cf6 \strokec6  UL = document.getElementById(\cf7 \strokec7 'game'\cf6 \strokec6 );\
+    \cf4 \strokec4 var\cf6 \strokec6  elements, i, j, cnt;\
+    \cf4 \strokec4 if\cf6 \strokec6  (score[prevTurn] >= gridValue) \{\
+        \cf4 \strokec4 var\cf6 \strokec6  classes = targetElement.className.split(\cf7 \strokec7 /\\s+/\cf6 \strokec6 );\
+        \cf4 \strokec4 for\cf6 \strokec6  (i = \cf7 \strokec7 0\cf6 \strokec6 ; i < classes.length; i += \cf7 \strokec7 1\cf6 \strokec6 ) \{\
+            cnt = \cf7 \strokec7 0\cf6 \strokec6 ;\
+            \cf4 \strokec4 if\cf6 \strokec6  (classes[i].indexOf(\cf7 \strokec7 'row'\cf6 \strokec6 ) !== -\cf7 \strokec7 1\cf6 \strokec6  || classes[i].indexOf(\cf7 \strokec7 'col'\cf6 \strokec6 ) !== -\cf7 \strokec7 1\cf6 \strokec6  || classes[i].indexOf(\cf7 \strokec7 'dia'\cf6 \strokec6 ) !== -\cf7 \strokec7 1\cf6 \strokec6 ) \{\
+                elements = UL.getElementsByClassName(classes[i]);\
+                \cf4 \strokec4 for\cf6 \strokec6  (j = \cf7 \strokec7 0\cf6 \strokec6 ; j < elements.length; j += \cf7 \strokec7 1\cf6 \strokec6 ) \{\
+                    \cf4 \strokec4 if\cf6 \strokec6  (elements[j].innerHTML == prevTurn) \{\
+                        cnt += \cf7 \strokec7 1\cf6 \strokec6 ;\
+                    \}\
+                \}\
+                \cf4 \strokec4 if\cf6 \strokec6  (cnt == gridValue) \{\
+                    \cf4 \strokec4 return\cf6 \strokec6  \cf4 \strokec4 true\cf6 \strokec6 ;\
+                \}\
+            \}\
+        \}\
+    \}\
+    \cf4 \strokec4 return\cf6 \strokec6  \cf4 \strokec4 false\cf6 \strokec6 ;\
+\}\
+\
+\cf4 \strokec4 function\cf6 \strokec6  fnNewGame() \{\
+    \cf4 \strokec4 var\cf6 \strokec6  gameUL = document.getElementById(\cf7 \strokec7 "game"\cf6 \strokec6 );\
+    \cf4 \strokec4 if\cf6 \strokec6  (gameUL.innerHTML !== \cf7 \strokec7 ''\cf6 \strokec6 ) \{\
+        gameUL.innerHTML = \cf4 \strokec4 null\cf6 \strokec6 ;\
+        score = \{\
+            \cf7 \strokec7 'X'\cf6 \strokec6 : \cf7 \strokec7 0\cf6 \strokec6 ,\
+            \cf7 \strokec7 'O'\cf6 \strokec6 : \cf7 \strokec7 0\cf6 \strokec6 \
+        \};\
+        turn = \cf7 \strokec7 'X'\cf6 \strokec6 ;\
+        gridValue = \cf7 \strokec7 0\cf6 \strokec6 ;\
+    \}\
+    \cf4 \strokec4 var\cf6 \strokec6  select = document.getElementById(\cf7 \strokec7 "grid"\cf6 \strokec6 );\
+    gridValue = select.options[select.selectedIndex].value;\
+    \cf4 \strokec4 var\cf6 \strokec6  i, j, li, k = \cf7 \strokec7 0\cf6 \strokec6 ,\
+        classLists;\
+    \cf4 \strokec4 var\cf6 \strokec6  gridAdd = +gridValue + \cf7 \strokec7 1\cf6 \strokec6 ;\
+\
+    \cf4 \strokec4 for\cf6 \strokec6  (i = \cf7 \strokec7 1\cf6 \strokec6 ; i <= gridValue; i += \cf7 \strokec7 1\cf6 \strokec6 ) \{\
+        tr = document.createElement(\cf7 \strokec7 'tr'\cf6 \strokec6 );\
+        \cf4 \strokec4 for\cf6 \strokec6  (j = \cf7 \strokec7 1\cf6 \strokec6 ; j <= gridValue; j += \cf7 \strokec7 1\cf6 \strokec6 ) \{\
+            k += \cf7 \strokec7 1\cf6 \strokec6 ;\
+            li = document.createElement(\cf7 \strokec7 'td'\cf6 \strokec6 );\
+            li.setAttribute(\cf7 \strokec7 "id"\cf6 \strokec6 , \cf7 \strokec7 'li'\cf6 \strokec6  + k);\
+\
+            classLists = \cf7 \strokec7 'td row'\cf6 \strokec6  + i + \cf7 \strokec7 ' col'\cf6 \strokec6  + j;\
+\
+            \cf4 \strokec4 if\cf6 \strokec6  (i === j) \{\
+                classLists = \cf7 \strokec7 'td row'\cf6 \strokec6  + i + \cf7 \strokec7 ' col'\cf6 \strokec6  + j + \cf7 \strokec7 ' dia0'\cf6 \strokec6 ;\
+            \}\
+\
+            \cf4 \strokec4 if\cf6 \strokec6  ((i + j) === gridAdd) \{\
+                classLists = \cf7 \strokec7 'td row'\cf6 \strokec6  + i + \cf7 \strokec7 ' col'\cf6 \strokec6  + j + \cf7 \strokec7 ' dia1'\cf6 \strokec6 ;\
+            \}\
+\
+            \cf4 \strokec4 if\cf6 \strokec6  (!isEven(gridValue) && (\cf8 \strokec8 Math\cf6 \strokec6 .round(gridValue / \cf7 \strokec7 2\cf6 \strokec6 ) === i && \cf8 \strokec8 Math\cf6 \strokec6 .round(gridValue / \cf7 \strokec7 2\cf6 \strokec6 ) === j))\
+                classLists = \cf7 \strokec7 'td row'\cf6 \strokec6  + i + \cf7 \strokec7 ' col'\cf6 \strokec6  + j + \cf7 \strokec7 ' dia0 dia1'\cf6 \strokec6 ;\
+\
+            li.className = classLists;\
+            tr.appendChild(li);\
+\
+        \}\
+        gameUL.appendChild(tr);\
+    \}\
+\}\
+\
+\
+\cf4 \strokec4 function\cf6 \strokec6  isEven(value) \{\
+    \cf4 \strokec4 if\cf6 \strokec6  (value % \cf7 \strokec7 2\cf6 \strokec6  == \cf7 \strokec7 0\cf6 \strokec6 )\
+        \cf4 \strokec4 return\cf6 \strokec6  \cf4 \strokec4 true\cf6 \strokec6 ;\
+    \cf4 \strokec4 else\cf6 \strokec6 \
+        \cf4 \strokec4 return\cf6 \strokec6  \cf4 \strokec4 false\cf6 \strokec6 ;\
+\}\cf9 \strokec9 \
+}

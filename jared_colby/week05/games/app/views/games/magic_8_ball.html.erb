@@ -1,0 +1,10 @@
+<h1>The devine 8 ball will take your questions now!</h1>
+<h2>ask wisely...</h2>
+
+
+<%= form_tag "/games/magic_8_ball", method: :post do |f| %>
+  <%= text_field_tag :message %>
+  <%= submit_tag "ask the 8 ball!" %>
+<%end%>
+
+<!-- <h2><%= @answer.rand[i]</h2> -->

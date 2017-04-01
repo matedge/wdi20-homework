@@ -1,0 +1,5 @@
+<%= form_tag "/games/rock_paper_scissors/throw", method: :post do %>
+  <%= label_tag "Your turn" %>
+  <input name="throw" type="text" />
+  <%= submit_tag "Go!" %>
+<% end %>

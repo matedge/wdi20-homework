@@ -1,0 +1,25 @@
+<form method="POST" action="/tennis_player/<%= @tennis_players['id'] %>">
+  <p>
+    <label>First Name</label>
+    <input type="text" name="first_name" value="<%= @tennis_players['first_name'] %>"/>
+  </p>
+  <p>
+    <label>Last Name</label>
+    <input type="text" name="last_name"  value="<%= @tennis_players['last_name'] %>"/>
+  </p>
+  <p>
+    <label>Age</label>
+    <input type="text" name="age"  value="<%= @tennis_players['age'] %>"/>
+  </p>
+  <p>
+    <label>Ranking</label>
+    <input type="text" name="ranking"  value="<%= @tennis_players['ranking'] %>"/>
+  </p>
+  <p>
+    <label>Image SRC</label>
+    <input type="text" name="img_src"  value="<%= @tennis_players['image_src'] %>"/>
+  </p>
+
+  <input type="submit" value="Edit Tennis Player">
+
+</form>

@@ -91,37 +91,37 @@ var lineName = function (line) {
 // Stops to travel between lines
 // startStop to Union Square
 var stopTravelPlus = function (startStop, startLine, endStop, endLine) {
-  if (startLine === endLine) {
+  if (startLine === endLine) { // means travelling on the same line without switching
     // var line = startLine;
-    var i = startLine.indexOf(startStop);
-    var j = startLine.indexOf(endStop);
-    if (i < j) {
-      return startLine.slice(i+1,j+1).join(', ');
+    var i = startLine.indexOf(startStop); // assign the index of the starting stop to a variable i
+    var j = startLine.indexOf(endStop); // assign the index of the ending stop to j
+    if (i < j) { // means going forward
+      return startLine.slice(i+1,j+1).join(', '); // slice method to show the stops it will pass through
     }
-    else if (i > j) {
-      var startLine = startLine.reverse(startLine);
-      var i = startLine.indexOf(startStop);
+    else if (i > j) { // means going backward
+      var startLine = startLine.reverse(startLine); // reverse method to reverse the array
+      var i = startLine.indexOf(startStop); // assign index again coz the reverse method would mess up the index
       var j = startLine.indexOf(endStop);
-      return startLine.slice(i+1,j+1).join(', ');
+      return startLine.slice(i+1,j+1).join(', '); // slice method to show the stops it passes through
     }
   }
-  else if (startLine !== endLine) {
-    var i = startLine.indexOf(startStop);
+  else if (startLine !== endLine) { // means have to switch lines
+    var i = startLine.indexOf(startStop); // assigning index again
     var j = startLine.indexOf('Union Square');
-    if (i < j) {
-      return startLine.slice(i+1,j+1).join(', ');
+    if (i < j) { // forward
+      return startLine.slice(i+1,j+1).join(', '); // stops to travel in the 1st lane
     }
-    else if (i > j) {
-      var startLine = startLine.reverse(startLine);
-      var i = startLine.indexOf(startStop);
+    else if (i > j) { // backward
+      var startLine = startLine.reverse(startLine); // reverse
+      var i = startLine.indexOf(startStop); // assign index again
       var j = startLine.indexOf('Union Square');
-      return startLine.slice(i+1,j+1).join(', ');
+      return startLine.slice(i+1,j+1).join(', '); // stops to travel in the first lane
     }
   }
 };
 
 // Union Square to endStop
-var stopTravelPlus2 = function (endStop, endLine) {
+var stopTravelPlus2 = function (endStop, endLine) { // stops to travel in the 2nd lane
   var k = endLine.indexOf('Union Square');
   var l = endLine.indexOf(endStop);
   if (k < l) {

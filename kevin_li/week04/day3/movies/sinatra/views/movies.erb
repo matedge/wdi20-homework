@@ -1,0 +1,27 @@
+<h1>Movies DB</h1>
+
+    <h2>Your movie info</h2>
+
+    <img src="<%= @img_src %>" alt="Movie Poster"/>
+
+    <% @movie.each do |key, value| %>
+    <p><%= "#{key}: #{value}" %></p>
+    <% end %>
+
+    <!-- <p>
+      <b>Title:</b><br><%= @movie["Title"] %>
+    </p>
+    <p>
+      <b>Year:</b><br><%= @movie["Year"] %>
+    </p>
+    <p>
+      <b>Genre:</b><br><%= @movie["Genre"] %>
+    </p>
+    <p>
+      <b>Actors:</b><br><%= @movie["Actors"] %>
+    </p>
+    <p>
+      <b>Plot:</b><br><%= @movie["Plot"] %>
+    </p> -->
+
+    <!-- <%= @movie_search["Search"]%> -->

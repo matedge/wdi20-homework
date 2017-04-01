@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+  margin: 20px auto;
+}
+
+h3 {
+  font-family: 'Roboto Slab', serif;
+  color: blue;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  width: 1080px;
+}
+
+p {
+  line-height: 2em;
+}
+
+nav li {
+  display: inline-block;
+  color: white;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+nav li a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+nav li a:link {
+  text-decoration: none;
+}
+
+nav {
+  height: 50px;
+  margin: 0 auto;
+  background-color: black;
+  text-align: center;
+}
+
+img {
+  margin: 0 auto;
+}

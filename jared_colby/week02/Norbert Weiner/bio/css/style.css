@@ -1,0 +1,54 @@
+
+body {
+  background-color: grey;
+  font-family: 'Slabo 27px', serif;
+}
+
+header {
+  background-color: white
+}
+
+a {
+  color: black;
+  padding: 30px;
+  text-decoration: none;
+}
+
+nav {
+  display: inline-block;
+}
+
+h1 {
+  text-align:center;
+}
+
+div {
+  height: 100px;
+  width: 25%;
+
+}
+.column{
+
+  display: inline-block;
+  margin-left: 60px;
+}
+
+
+footer {
+  padding:30px 0;
+  font-size:12px;
+  line-height:1.4em;
+  text-decoration: underline;
+  text-align: center;
+
+
+}
+
+img {
+
+  border: 1px solid #fffefa;
+  text-align: center;
+  display: inline-block;
+  margin-left: 25%;
+  margin-right:25%;
+}

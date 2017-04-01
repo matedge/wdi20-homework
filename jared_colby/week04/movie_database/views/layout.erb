@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OMDB Movie Database App</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+    <form method="GET"action="/movies" >
+      <label>Enter Title</label>
+      <input type="text" name="title"/>
+      <input type="submit" value="Show Movie Info!"/>
+    </form>
+
+    <%= yield %>
+
+  </body>
+</html>

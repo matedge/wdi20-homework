@@ -1,0 +1,5 @@
+<%= form_tag("/show", method: :post) do %>
+  <%= label_tag(:input, "Rock, paper, scissor:") %>
+  <%= text_field_tag(:input) %>
+  <%= submit_tag("Submit") %>
+<% end %>

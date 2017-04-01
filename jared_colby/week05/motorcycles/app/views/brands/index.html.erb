@@ -1,0 +1,9 @@
+<h1>Motorcycle Brands</h1>
+<%= link_to "New Brand", new_brand_path %>
+<ul>
+  <% @brands.each do |b| %>
+  <li>
+  <%= link_to b.manufacturer,brand_path(b.id) %></li>
+  <%end%>
+
+</ul>

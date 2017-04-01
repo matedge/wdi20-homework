@@ -1,0 +1,29 @@
+
+body {
+  font-family: 'barrio';
+}
+#rocket{
+  font-size: 20px;
+}
+div {
+  height: 100px;
+}
+.box1{
+  background: blue;
+  position: relative;
+}
+.box2{
+  background: red;
+}
+.box3{
+  background: green;
+}
+.box4{
+  background: yellow;
+}
+.box5{
+  background: purple;
+  height: 20px;
+  width: 100px;
+
+}

@@ -1,0 +1,8 @@
+<p><%= "The computer threw a #{@pattern}." %></p>
+<p><%= "You threw a #{params[:throw_pattern]}." %></p>
+
+<% if @pattern == params[:throw_pattern] %>
+<p><%= "You won." %></p>
+<% else %>
+<p><%= "You lost." %></p>
+<% end %>

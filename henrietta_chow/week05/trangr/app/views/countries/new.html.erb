@@ -1,0 +1,16 @@
+<% if @country.errors %>
+  <ul>
+    <% @country.errors.full_messages.each do |msg| %>
+      <li><<%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h1>Add a New Country</h1>
+<%= form_for @country do |c| %>
+  <p>
+    <%= c.label "Name" %>
+    <%= c.text_field :name %>
+  </p>
+  <%= c.submit "Add", class: "ui primary button" %>
+<% end %>

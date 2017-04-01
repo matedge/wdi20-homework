@@ -1,0 +1,7 @@
+.mario{
+  height: 800px;
+  width: auto;
+  background-image: url(' ../mariobros.png');
+      /*image source : http://more-sky.com/data/out/10/IMG_437837.png  */
+  background-size: cover;
+}

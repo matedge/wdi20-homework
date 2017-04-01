@@ -1,0 +1,23 @@
+<% if @landmark.errors %>
+  <ul>
+    <% @landmark.errors.full_messages.each do |msg| %>
+      <li><<%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<h2>Places to visit?</h2>
+<%= form_for @landmark do |l| %>
+  <input type="hidden" name="landmark[city_id]" value="<%= params[:city_id] %>"/>
+  <p>
+    <%= l.label "Name" %>
+    <%= l.text_field :name %>
+  </p>
+  <p>
+    <%= l.label "Image Source" %>
+    <%= l.text_field :image %>
+  </p>
+  <p>
+    <%= l.submit class: "ui primary button"%>
+<% end %>
