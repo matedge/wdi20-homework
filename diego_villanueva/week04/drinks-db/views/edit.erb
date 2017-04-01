@@ -1,0 +1,15 @@
+<form method="POST" action="/drinks/<%= @drink['id'] %>">
+  <p>
+    <label>Drink Name</label>
+    <input type="text" name="drink_name" value="<%= @drink['drink_name'] %>"/>
+  </p>
+  <p>
+    <label>Drink Origin</label>
+    <input type="text" name="drink_name" value="<%= @drink['drink_name'] %>"/>
+  </p>
+  <p>
+    <label>Image SRC</label>
+    <input type="text" name="img_src" value="<%= @drink['img_src] %>"/>
+  </p>
+  <input type="submit" value="Edit Drink"/>
+</form>

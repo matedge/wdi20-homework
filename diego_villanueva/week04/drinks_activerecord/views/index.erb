@@ -1,0 +1,15 @@
+<h1> Drinks around the world </h1>
+<h3> This is a list of famous drinks </h3>
+
+
+<% @results.each do |drink| %>
+  <p>
+    <a href="drinks/<%= drink.id %>">
+      <%= drink.drink_name %>
+    </a>
+  </p>
+<% end %>
+
+<p>
+  <a href="/drinks/new"> <button> Add new drink </button> </a>
+</p>

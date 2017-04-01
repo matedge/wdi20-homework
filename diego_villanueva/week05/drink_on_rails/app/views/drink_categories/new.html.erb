@@ -1,0 +1,19 @@
+<% if @drink_category.errors %>
+  <ul>
+    <% @drink_category.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+</ul>
+<% end%>
+
+<%= form_for @drink_category do |d| %>
+  <p>
+    <%= d.label :name %>
+    <%= d.text_field :name %>
+  </p>
+  <p>
+  <%= d.label :image_src %>
+  <%= d.text_field :image_src %>
+</p>
+  <%= d.submit %>
+<% end%>

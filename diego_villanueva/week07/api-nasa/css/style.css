@@ -1,0 +1,12 @@
+
+body {
+  background-image: url("http://more-sky.com/data/out/12/IMG_533861.gif");
+  /*background-color: red;*/
+  color:red;
+}
+
+#map {
+        height: 400px;
+        width: 100%;
+        border-radius: 10px 10px 10px 10px;
+       }

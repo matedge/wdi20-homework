@@ -1,0 +1,10 @@
+<h1>Magic 8 </h1>
+
+
+<%= form_tag "/games/magic8", method: :get do %>
+  <%= "The answer is: " %>
+  <%= puts @answer %>
+<%end%>
+
+
+<p><%= link_to "Go back to Index", root_path %></p>

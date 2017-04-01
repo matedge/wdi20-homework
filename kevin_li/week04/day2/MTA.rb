@@ -32,37 +32,34 @@ line_l = ['8th', '6th', 'Union Square', '3rd', '1st']
 line_6 = ['Grand Central', '33rd', '28th', '23rd', 'Union Square', 'Astor Place']
 
 
-def single_line_trip(start_line, start_station, end_station)
-  if start_line.index(start_station) < start_line.index(end_station)
-    puts start_line[start_line.index(start_station)+1..start_line.index(end_station)]
-  else
-    puts start_line.reverse[start_line.reverse.index(start_station)+1..start_line.reverse.index(end_station)]
-  end
-  puts "Total stops: #{(start_line.index(start_station) - start_line.index(end_station)).abs}"
+def single_line_trip(line, start_station, end_station)
+  start_index = line.index(start_station)
+  end_index = line.index(end_station)
+  start_index < end_index ? line[start_index+1..end_index] : line[end_index..start_index-1].reverse
 end
 
 
 def multi_line_trip(start_line, start_station, end_line, end_station)
-  if start_line.index(start_station) < start_line.index('Union Square')
-    puts start_line[start_line.index(start_station)+1..start_line.index('Union Square')]
-  else
-    puts start_line.reverse[start_line.reverse.index(start_station)+1..start_line.reverse.index('Union Square')]
-  end
+  first_line = single_line_trip(start_line, start_station, 'Union Square')
+  second_line = single_line_trip(end_line, 'Union Square', end_station)
+  puts first_line
   puts "Switch line at Union Square. Continues through:"
-  if end_line.index('Union Square') < end_line.index(end_station)
-    puts end_line[end_line.index('Union Square')+1..end_line.index(end_station)]
-  else
-    puts end_line.reverse[end_line.reverse.index('Union Square')+1..end_line.reverse.index(end_station)]
-  end
-  puts "Total stops: #{(start_line.index(start_station) - start_line.index('Union Square')).abs + (end_line.index('Union Square') - end_line.index(end_station)).abs}"
+  puts second_line
+  puts "Total stops: #{first_line.length + second_line.length}"
 end
 
 
 def plan_trip(start_line, start_station, end_line, end_station)
   puts "Travels through the stations:"
-  single_line_trip(start_line, start_station, end_station) if start_line == end_line
-  multi_line_trip(start_line, start_station, end_line, end_station) if start_line != end_line
+  if start_line == end_line
+    single_line =  single_line_trip(start_line, start_station, end_station)
+    puts single_line
+    puts "Total stops: #{single_line.length}"
+  else
+    multi_line_trip(start_line, start_station, end_line, end_station)
+  end
 end
 
 plan_trip(line_n, 'Times Square', line_l, '8th')
-plan_trip(line_n, '28th', line_6, '28th')
+# plan_trip(line_n, '28th', line_6, '28th')
+# plan_trip(line_n, '8th', line_n, 'Times Square')

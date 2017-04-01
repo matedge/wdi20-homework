@@ -1,0 +1,7 @@
+<h1> Drink Categories </h1>
+<%= link_to "New drink category", new_drink_category_path %>
+<ul>
+  <% @drink_categories.each do |dc| %>
+    <li> <%= link_to dc.name, drink_category_path(dc.id) %> </li>
+  <%end%>
+</ul>

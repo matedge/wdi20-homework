@@ -1,0 +1,9 @@
+<h1> <%= @drink_category.name %></h1>
+<%= link_to "Add a new drink item", new_drink_item_path(drink_category_id: @drink_category.id) %>
+<!-- we passed the drink category id as a param to use later  -->
+
+<ul>
+  <% @drink_category.drink_items.each do |drink| %>
+    <li> <%= drink.name %> | <%= link_to "Edit", edit_drink_item_path(drink) %> | <%= link_to "Delete", drink_item_path(drink_id: drink.id), method: :delete %> </li>
+  <%end%>
+</ul>

@@ -1,0 +1,6 @@
+<h1><%= @drink['drink_name'] + " is from " + @drink['drink_origin'] %></h1>
+<img src="<%= @drink['img_src'] %>"/>
+<p>
+  <a href="/drinks/<%= @drink['id'] %>/edit"><button>EDIT</button></a>
+  <a href="/drinks/<%= @drink['id'] %>/delete"><button>DELETE</button></a>
+</p>

@@ -1,0 +1,7 @@
+<h1>List of our favourite famous drinks</h1>
+<% @results.each do |drink| %>
+  <p><a href="/drinks/<%= drink['id'] %>"><%= "#{drink['id']}: #{drink['drink_name']} - #{drink['drink_origin']}" %></a></p>
+<% end %>
+<p>
+  <a href="/drinks/new"><button>Add Drink to the List</button></a>
+</p>

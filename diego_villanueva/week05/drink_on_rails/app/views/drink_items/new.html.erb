@@ -1,0 +1,21 @@
+<%= form_for @drink_item do |d| %>
+  <ul>
+    <% @drink_item.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+</ul>
+<% end%>
+
+<%= form_for @drink_item do |d| %>
+ <input type="hidden" name="drink_item[drink_category_id]" value="<%= @drink_category_id %>" />
+
+  <p>
+    <%= d.label :name %>
+    <%= d.text_field :name %>
+  </p>
+  <p>
+  <%= d.label :image_src %>
+  <%= d.text_field :image_src %>
+</p>
+  <%= d.submit %>
+<% end%>
