@@ -1,0 +1,6 @@
+<div>
+  <h2>My favrouite photos</h2>
+  <% @favourites.each do |f|%>
+    <img src="<%= f.image_src %>"/>
+  <%end%>
+</div>
