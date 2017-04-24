@@ -1,0 +1,29 @@
+
+body{
+  background-image: url(http://fillmurray.com/1024/1000);
+  background-size: cover;
+}
+
+#container{
+  max-width: 960px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1em;
+  border-radius: 1em;
+  /*font-size: 16pt;*/
+}
+
+.bubble{
+  position: absolute;
+  /*background-image: url(http:fillmurray.com/200/200);*/
+  border: 1px solid blue;
+  border-radius: 100%;
+  z-index: -100;
+}
+
+
+.bill {
+  height: 100%;
+  background-image: url(http://fillmurray.com/900/1200);
+  background-size: cover;
+}
